@@ -1,0 +1,13 @@
+function solution(absolutes, signs) {
+    let num = 0;
+    
+    for(let j = 0 ; j < signs.length; j++) {
+        if(signs[j]){
+            num = num + +absolutes[j];
+        } else {
+            num = num + (+absolutes[j] - (+absolutes[j] * 2))
+        }
+    }
+    
+    return num;
+}
